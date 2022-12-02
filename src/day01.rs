@@ -1,4 +1,11 @@
-use std::{cmp::Reverse, error::Error, fs};
+use std::{
+    cmp::Reverse,
+    collections::BinaryHeap,
+    error::Error,
+    fs,
+    io::{BufRead, BufReader},
+    path::Path,
+};
 
 #[derive(clap::Args, Debug)]
 pub struct Args {
@@ -6,20 +13,33 @@ pub struct Args {
     input: String,
 }
 
+fn read_elves<P: AsRef<Path>>(src: P) -> Result<Vec<i32>, Box<dyn Error>> {
+    let mut elves = vec![0];
+    for line in BufReader::new(fs::File::open(src)?).lines() {
+        let line = line?;
+        if line.is_empty() {
+            elves.push(0);
+        } else {
+            *elves.last_mut().unwrap() += line.parse::<i32>()?;
+        }
+    }
+    Ok(elves)
+}
+
+fn top_k<T: Ord + Copy>(vals: &[T], k: usize) -> Vec<T> {
+    let mut h = BinaryHeap::new();
+    for i in vals {
+        h.push(Reverse(*i));
+        if h.len() > k {
+            h.pop();
+        }
+    }
+    h.into_iter().map(|Reverse(x)| x).collect()
+}
+
 pub fn solve(args: &Args) -> Result<(), Box<dyn Error>> {
-    let data = fs::read_to_string(&args.input)?;
-    let mut elves = data
-        .split("\n\n")
-        .map(|e| {
-            e.split("\n").fold(Ok(0), |sum, l| {
-                sum.and_then(|v| l.parse::<i32>().and_then(|x| Ok(x + v)))
-            })
-        })
-        .collect::<Result<Vec<_>, _>>()?;
-
-    elves.sort_by_key(|w| Reverse(*w));
-    println!("part 1: {}", elves.first().unwrap());
-    println!("part 2: {}", elves.iter().take(3).sum::<i32>());
-
+    let elves = read_elves(&args.input)?;
+    println!("part 1: {}", elves.iter().max().unwrap());
+    println!("part 2: {}", top_k(&elves, 3).iter().sum::<i32>());
     Ok(())
 }
