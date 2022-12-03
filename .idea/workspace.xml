@@ -5,26 +5,12 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a037240-1b63-4ed3-bc7f-a78d9b6ca025" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/.gitignore" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/kotlinc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/uiDesigner.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/build.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.jar" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradle/wrapper/gradle-wrapper.properties" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/gradlew.bat" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/settings.gradle.kts" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Day01.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Input.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Main.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day01/example.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day01/input.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Day02.kt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/day02/example.txt" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/src/main/resources/day02/input.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/gradle.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/gradle.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -67,6 +53,7 @@
     "RunOnceActivity.OpenProjectViewOnStart": "true",
     "RunOnceActivity.ShowReadmeOnStart": "true",
     "SHARE_PROJECT_CONFIGURATION_FILES": "true",
+    "last_opened_file_path": "/Users/knorton/Documents/2022/12/aoc2022",
     "settings.editor.selected.configurable": "actions.on.save"
   }
 }]]></component>
@@ -74,7 +61,7 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kellegous.aoc.MainKt" />
       <module name="aoc2022.main" />
-      <option name="PROGRAM_PARAMETERS" value="day01" />
+      <option name="PROGRAM_PARAMETERS" value="day02" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
