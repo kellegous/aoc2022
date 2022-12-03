@@ -35,9 +35,9 @@ class Day02 : Subcommand("day02", "Day 2") {
 
     override fun execute() {
         val lines = BufferedReader(Input.readerFrom(input)).lines().toList()
-        val p1Score = lines.map { p1Scores.get(it)!! }.sum()
+        val p1Score = lines.sumOf { p1Scores.get(it)!! }
         println("part 1: $p1Score")
-        val p2Score = lines.map { p2Scores.get(it)!! }.sum()
+        val p2Score = lines.sumOf { p2Scores.get(it)!! }
         println("part 2: $p2Score")
     }
 }

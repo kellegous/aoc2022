@@ -5,14 +5,8 @@
   </component>
   <component name="ChangeListManager">
     <list default="true" id="6a037240-1b63-4ed3-bc7f-a78d9b6ca025" name="Changes" comment="">
-      <change afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Day03.kt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day03/example.txt" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/src/main/resources/day03/input.txt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Day01.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Day01.kt" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Day02.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Day02.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Input.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Input.kt" afterDir="false" />
-      <change beforePath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Main.kt" beforeDir="false" afterPath="$PROJECT_DIR$/src/main/kotlin/kellegous/aoc/Main.kt" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -63,7 +57,7 @@
     <configuration name="MainKt" type="JetRunConfigurationType" temporary="true" nameIsGenerated="true">
       <option name="MAIN_CLASS_NAME" value="kellegous.aoc.MainKt" />
       <module name="aoc2022.main" />
-      <option name="PROGRAM_PARAMETERS" value="day03 --input day03/input.txt" />
+      <option name="PROGRAM_PARAMETERS" value="day02 --input day02/example.txt" />
       <shortenClasspath name="NONE" />
       <method v="2">
         <option name="Make" enabled="true" />
