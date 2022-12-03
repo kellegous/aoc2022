@@ -1,7 +1,16 @@
 package kellegous.aoc
 
-object Input {
-    fun readerFrom(src: String) = this.javaClass.classLoader.getResourceAsStream(src)!!.reader()
+import java.io.IOException
 
-    fun textFrom(src: String) = this.javaClass.classLoader.getResource(src)!!
+object Input {
+    private fun resourceOf(src: String) = this.javaClass.classLoader.getResource(src).let {
+        if (it == null) {
+            throw IOException("resource not found: $src")
+        }
+        it
+    }
+
+    fun readerFrom(src: String) = resourceOf(src).openStream().reader()
+
+    fun textFrom(src: String) = resourceOf(src).readText()
 }
