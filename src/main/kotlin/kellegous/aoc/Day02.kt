@@ -2,15 +2,12 @@
 
 package kellegous.aoc
 
-import kotlinx.cli.ArgType
 import kotlinx.cli.ExperimentalCli
 import kotlinx.cli.Subcommand
-import kotlinx.cli.default
 import java.io.BufferedReader
 
 class Day02 : Subcommand("day02", "Day 2") {
-    val input by option(ArgType.String, "input", "i")
-        .default("day02/input.txt")
+    val input by Input.optionFor(this)
 
     val p1Scores = mapOf(
         "A X" to 3 + 1,

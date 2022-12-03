@@ -7,8 +7,7 @@ import java.io.BufferedReader
 import java.util.*
 
 class Day01 : Subcommand("day01", "Day 1") {
-    val input by option(ArgType.String, "input", "i")
-        .default("day01/input.txt")
+    val input by Input.optionFor(this)
 
     private fun topK(vals: List<Int>, k: Int) = PriorityQueue<Int>().apply {
         for (item in vals) {
