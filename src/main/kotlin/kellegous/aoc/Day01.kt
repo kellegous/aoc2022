@@ -3,7 +3,6 @@
 package kellegous.aoc
 
 import kotlinx.cli.*
-import java.io.BufferedReader
 import java.util.*
 
 class Day01 : Subcommand("day01", "Day 1") {
@@ -20,7 +19,7 @@ class Day01 : Subcommand("day01", "Day 1") {
     }
 
     override fun execute() {
-        val elves = BufferedReader(Input.readerFrom(input)).lineSequence().fold(mutableListOf(0)) { acc, line ->
+        val elves = Input.linesFrom(input).fold(mutableListOf(0)) { acc, line ->
             if (line.isEmpty()) {
                 acc.add(0)
             } else {

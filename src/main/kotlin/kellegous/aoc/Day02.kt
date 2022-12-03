@@ -4,7 +4,6 @@ package kellegous.aoc
 
 import kotlinx.cli.ExperimentalCli
 import kotlinx.cli.Subcommand
-import java.io.BufferedReader
 
 class Day02 : Subcommand("day02", "Day 2") {
     val input by Input.optionFor(this)
@@ -34,7 +33,7 @@ class Day02 : Subcommand("day02", "Day 2") {
     )
 
     override fun execute() {
-        val lines = BufferedReader(Input.readerFrom(input)).lines().toList()
+        val lines = Input.linesFrom(input).toList()
         val p1Score = lines.sumOf { p1Scores.get(it)!! }
         println("part 1: $p1Score")
         val p2Score = lines.sumOf { p2Scores.get(it)!! }

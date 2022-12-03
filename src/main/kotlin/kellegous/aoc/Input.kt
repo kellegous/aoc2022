@@ -6,6 +6,7 @@ import kotlinx.cli.ArgType
 import kotlinx.cli.ExperimentalCli
 import kotlinx.cli.Subcommand
 import kotlinx.cli.default
+import java.io.BufferedReader
 import java.io.IOException
 
 object Input {
@@ -15,6 +16,9 @@ object Input {
         }
         it
     }
+
+    fun linesFrom(src: String) = BufferedReader(readerFrom(src))
+        .lineSequence()
 
     fun readerFrom(src: String) = resourceOf(src).openStream().reader()
 
