@@ -6,7 +6,17 @@ import kotlinx.cli.ArgParser
 import kotlinx.cli.ExperimentalCli
 
 fun main(args: Array<String>) {
-    val parser = ArgParser("aoc", strictSubcommandOptionsOrder = true)
-    parser.subcommands(Day01(), Day02(), Day03(), Day04())
+    val parser = ArgParser(
+        "aoc",
+        strictSubcommandOptionsOrder = true,
+        prefixStyle = ArgParser.OptionPrefixStyle.GNU
+    )
+    parser.subcommands(
+        Day01(),
+        Day02(),
+        Day03(),
+        Day04(),
+        Day05()
+    )
     parser.parse(args)
 }
