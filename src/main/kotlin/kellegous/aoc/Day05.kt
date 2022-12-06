@@ -28,7 +28,6 @@ private fun parseStacks(lines: Iterator<String>): List<ArrayDeque<Char>> {
     return stacks
 }
 
-
 private data class Op(val count: Int, val from: Int, val to: Int) {
     companion object {
         fun parse(s: String): Op {
