@@ -20,4 +20,12 @@ class AllTheTests {
             Day02.solve("day02/example.txt")
         )
     }
+
+    @Test
+    fun day03() {
+        assertEquals(
+            Pair(157, 70),
+            Day03.solve("day03/example.txt")
+        )
+    }
 }
