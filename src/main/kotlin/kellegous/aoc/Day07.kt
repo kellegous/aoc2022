@@ -14,12 +14,13 @@ class Day07 : Subcommand("day07", "Day 7") {
         private fun parseEntry(lines: ArrayDeque<String>) =
             sequence {
                 while (lines.isNotEmpty() && !lines.first().startsWith("$")) {
-                    val line = lines.removeFirst()
-                    if (!line.startsWith("dir ")) {
-                        yield(line)
-                    }
+                    yield(lines.removeFirst())
                 }
-            }.sumOf { it.substringBefore(" ").toInt() }
+            }.filter {
+                !it.startsWith("dir ")
+            }.sumOf {
+                it.substringBefore(" ").toInt()
+            }
 
         private fun parentsOf(p: Path) = sequence {
             var n = p
