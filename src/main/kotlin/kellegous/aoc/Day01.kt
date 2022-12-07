@@ -22,9 +22,9 @@ class Day01 : Subcommand("day01", "Day 1") {
             return elves.max() to topK(elves, 3).sum()
         }
 
-        private fun topK(vals: List<Int>, k: Int) = PriorityQueue<Int>().apply {
-            for (item in vals) {
-                add(item)
+        private fun topK(values: List<Int>, k: Int) = PriorityQueue<Int>().apply {
+            for (value in values) {
+                add(value)
                 if (size > k) {
                     poll()
                 }
