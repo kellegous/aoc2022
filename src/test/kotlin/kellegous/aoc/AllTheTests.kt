@@ -65,4 +65,12 @@ class AllTheTests {
             assertEquals(expected, Day06.distinctOffsetOf(s, size))
         }
     }
+
+    @Test
+    fun day07() {
+        assertEquals(
+            Pair(95437, 24933642),
+            Day07.solve("day07/example.txt")
+        )
+    }
 }
