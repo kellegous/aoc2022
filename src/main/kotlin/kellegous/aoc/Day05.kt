@@ -5,7 +5,7 @@ package kellegous.aoc
 import kotlinx.cli.ExperimentalCli
 import kotlinx.cli.Subcommand
 
-val pattern = """move (\d+) from (\d+) to (\d+)""".toRegex()
+private val pattern = """move (\d+) from (\d+) to (\d+)""".toRegex()
 
 private fun parseStacks(lines: Iterator<String>): List<ArrayDeque<Char>> {
     val first = lines.next()
@@ -54,21 +54,29 @@ private fun process(
 class Day05 : Subcommand("day05", "Day 5") {
     private val input by Input.optionFor(this)
 
-    override fun execute() {
-        val p1 = process(input) { stacks, op ->
-            op.apply {
-                repeat(count) { stacks[to].addLast(stacks[from].removeLast()) }
+    companion object {
+        fun solve(src: String): Pair<String, String> {
+            val p1 = process(src) { stacks, op ->
+                op.apply {
+                    repeat(count) { stacks[to].addLast(stacks[from].removeLast()) }
+                }
             }
-        }
-        println("part 1: $p1")
 
-        val p2 = process(input) { stacks, op ->
-            op.apply {
-                val stack = ArrayDeque<Char>()
-                repeat(count) { stack.addLast(stacks[from].removeLast()) }
-                repeat(count) { stacks[to].addLast(stack.removeLast()) }
+            val p2 = process(src) { stacks, op ->
+                op.apply {
+                    val stack = ArrayDeque<Char>()
+                    repeat(count) { stack.addLast(stacks[from].removeLast()) }
+                    repeat(count) { stacks[to].addLast(stack.removeLast()) }
+                }
             }
+
+            return Pair(p1, p2)
         }
+    }
+
+    override fun execute() {
+        val (p1, p2) = solve(input)
+        println("part 1: $p1")
         println("part 2: $p2")
     }
 }

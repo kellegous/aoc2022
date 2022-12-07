@@ -36,4 +36,12 @@ class AllTheTests {
             Day04.solve("day04/example.txt")
         )
     }
+
+    @Test
+    fun day05() {
+        assertEquals(
+            Pair("CMZ", "MCD"),
+            Day05.solve("day05/example.txt")
+        )
+    }
 }
