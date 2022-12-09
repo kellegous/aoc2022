@@ -19,6 +19,7 @@ fun main(args: Array<String>) {
         Day05(),
         Day06(),
         Day07(),
+        Day08(),
     )
     parser.parse(args)
 }
