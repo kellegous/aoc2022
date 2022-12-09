@@ -29,11 +29,12 @@ class Day08 : Subcommand("day08", "Day 8") {
                         (j - ((j - 1 downTo 0).find { at(i, it) >= v } ?: 0))
             }
 
-            fun coordinates() = sequence {
-                for (i in 0 until size) {
-                    yieldAll((0 until size).map { i to it })
+            val coordinates
+                get() = sequence {
+                    for (i in 0 until size) {
+                        yieldAll((0 until size).map { i to it })
+                    }
                 }
-            }
         }
 
         fun solve(src: String): Pair<Int, Int> {
@@ -42,8 +43,8 @@ class Day08 : Subcommand("day08", "Day 8") {
                     .flatMap { it.asSequence().map { it.code - 48 } }
                     .toList())
             return Pair(
-                grid.coordinates().count { (i, j) -> grid.isVisible(i, j) },
-                grid.coordinates().maxOf { (i, j) -> grid.score(i, j) }
+                grid.coordinates.count { (i, j) -> grid.isVisible(i, j) },
+                grid.coordinates.maxOf { (i, j) -> grid.score(i, j) }
             )
         }
     }
