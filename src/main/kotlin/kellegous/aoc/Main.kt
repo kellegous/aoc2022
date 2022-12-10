@@ -20,6 +20,7 @@ fun main(args: Array<String>) {
         Day06(),
         Day07(),
         Day08(),
+        Day09(),
     )
     parser.parse(args)
 }

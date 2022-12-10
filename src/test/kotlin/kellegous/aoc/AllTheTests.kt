@@ -81,4 +81,16 @@ class AllTheTests {
             Day08.solve("day08/example.txt")
         )
     }
+
+    @Test
+    fun day09() {
+        assertEquals(
+            Pair(13, 1),
+            Day09.solve("day09/example01.txt")
+        )
+        assertEquals(
+            Pair(88, 36),
+            Day09.solve("day09/example02.txt")
+        )
+    }
 }
