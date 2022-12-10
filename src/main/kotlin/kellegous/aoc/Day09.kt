@@ -20,12 +20,8 @@ class Day09 : Subcommand("day09", "Day 9") {
             }
 
             fun moveBy(dx: Int, dy: Int) {
-                moveTo(x + dx, y + dy)
-            }
-
-            fun moveTo(x: Int, y: Int) {
-                this.x = x
-                this.y = y
+                x += dx
+                y += dy
                 observers.forEach { it(this) }
             }
 
