@@ -49,7 +49,7 @@ class Day09 : Subcommand("day09", "Day 9") {
             val head = Particle()
 
             val p1 = mutableSetOf(Pair(0, 0))
-            Particle(0, 0).apply {
+            Particle().apply {
                 follow(head)
                 observe { p1.add(it.asPair()) }
             }
